@@ -33,8 +33,7 @@
     * Go to Tests -> MobileApp -> Mobilehub vehiclelist
 
 * [Ganglia](https://ganglia.admin.autoscout24.com/)
-    * currently not working :(
-
+    * You will find stats about the appserver and the databases `MobileApp *`
 
 
 
