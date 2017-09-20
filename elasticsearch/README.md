@@ -33,9 +33,13 @@ There is a TC agent (lelabuv001) running cron job for updating ES cluster with n
 
 #### Via TC agent (deep level):
 Login into lelabuv001 (ssh or putty e.g. via lteropv002.as24.local)
+
 sudo su - deploy
+
 crontab -l
+
 Shows existing 2 cron jobs (LIVE1 & LIVE2) , you will something like this:
+
 */2 * * * * cd /opt/buildagent/scripts/LIVE2-classifieds-46/IndexSetup; source ./activate.sh; python ./partialBuild.py environment_name=LIVE2 build_number=46 >> /opt/buildagent/scripts/LIVE2-classifieds-46/log_symlink/cron.log 2>> /opt/buildagent/scripts/LIVE2-classifieds-46/log_symlink/cron.err # LIVE2_partial_classifieds
  
 Take a look into logfile /opt/buildagent/scripts/LIVE2-classifieds-46/log_symlink/cron.log for e.g. last 200 lines
@@ -43,28 +47,34 @@ tail -200 /opt/buildagent/scripts/LIVE2-classifieds-46/log_symlink/cron.log
  
 #### Via Icinga (high level):
 Login https://icinga2.admin.autoscout24.com
+
 Look for LWEBEWV, click on a machine, click to Service tab
+
 information regarding last partial update is displayed
+
  
 # Checking cluster status
 #### Per URL
-	•	Login in the live zone (e.g. lteropv002.as24.local)
-	•	curl or browser with following adress: LELAVMV002:9200/_cluster/health?pretty
+Login in the live zone (e.g. lteropv002.as24.local)
+
+curl or browser with following adress: LELAVMV002:9200/_cluster/health?pretty
  
 #### Inciga
 Login https://icinga2.admin.autoscout24.com
+
 Look for LWEBEWV, click on a machine, click to "Service" tab
+
 information regarding status is displayed
- 
+
 # Team City Builds
 https://teamcity.as24.local/project.html?projectId=VehicleMarketElasticsearch&tab=projectOverview
  
 # ES support (https://support.elastic.co/)
 List of Ppeople who can create tickets:
-Simon Mittermueller        
-Inaki Anduaga        
-Marija Bajic        
-Radu Crican        
-Juri Smarschevski
-Philipp Garbe        
-Diego Toharia        
+* Simon Mittermueller        
+* Inaki Anduaga        
+* Marija Bajic        
+* Radu Crican        
+* Juri Smarschevski
+* Philipp Garbe        
+* Diego Toharia        
