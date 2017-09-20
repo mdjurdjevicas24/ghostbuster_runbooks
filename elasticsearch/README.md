@@ -69,7 +69,9 @@ information regarding status is displayed
 # Team City Builds
 https://teamcity.as24.local/project.html?projectId=VehicleMarketElasticsearch&tab=projectOverview
  
-# ES support (https://support.elastic.co/)
+# ES support
+(https://support.elastic.co/)
+
 List of Ppeople who can create tickets:
 * Simon Mittermueller        
 * Inaki Anduaga        
