@@ -1,35 +1,36 @@
 Elastic search Runbook
- 
+
 # Infrastructure setup
-[![N|Solid](https://bla.png)]
+![alt text](https://github.com/AutoScout24/ghostbuster_runbooks/blob/master/elasticsearch/elastic_infra.png "Elasticsearch Infrastructure")
  
 #### Elasticsearch clusters
 Every cluster contains [currently] 10 machines, running Elasticsearch 1.7.5
+
 Cluster 1:
-LELAVMV001
-LELAVMV003
-...
-LELAVMV019
- 
+- LELAVMV001
+- LELAVMV003
+- ...
+- LELAVMV019
+
 Cluster 2:
-LELAVMV002
-LELAVMV004
-...
-LELAVMV020
+- LELAVMV002
+- LELAVMV004
+- ...
+- LELAVMV020
  
 Every cluster has a build server which is used for new index creation in background mode
 Cluster 1: LELAVMV001
 Cluster 2: LELAVMV006
- 
+
 #### Varnish machines for caching
 LPRXVAV001 - LPRXVAV004
- 
+
 #### WebAPI
 LWEBEWV001-LWEBEWV012
- 
+
 # Checking partial update
 There is a TC agent (lelabuv001) running cron job for updating ES cluster with newest data (every 2 min period)
- 
+
 #### Via TC agent (deep level):
 Login into lelabuv001 (ssh or putty e.g. via lteropv002.as24.local)
 sudo su - deploy
