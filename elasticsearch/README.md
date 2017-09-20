@@ -72,7 +72,7 @@ https://teamcity.as24.local/project.html?projectId=VehicleMarketElasticsearch&ta
 # ES support
 (https://support.elastic.co/)
 
-List of Ppeople who can create tickets:
+List of people who can create tickets:
 * Simon Mittermueller        
 * Inaki Anduaga        
 * Marija Bajic        
